@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:rgb(20, 237, 237) ;
+        height: 70px;
+        gap: 300px;
+    }
+
+    .list ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        font-size: 19px;
+
+    }
+
+    h1{
+        color: rgb(0, 0, 0);
+    }
+
+    li{
+        color: rgb(0, 0, 0);
+        list-style: none;
+    }
+
+    .mav ul li{
+
+        color: black;
+        font-size: 18px;
+    }
+
+    .mav ul{
+        position: absolute;
+        right: 100px;
+        top: 80px;
+    }
+
+    .mav{
+        display: none;
+        box-shadow: 1px 2px 1px 1px black;
+    }
+
+    @media only screen and (min-width: 600px) {
+
+        .nav{
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+
+        .mav ul{
+        position: absolute;
+        right: 30px;
+        top: 80px;
+    }
+
+    
+
+    h1{
+        position: relative;
+        left: 30px;
+    }
+
+  .list{
+    display: none;
+  }
+
+  .mav ul{
+    height: 100px;
+    width: 100px;
+    box-shadow: 1px 2px 1px 1px black;
+  }
+  .nav{
+    margin-right: 40px;
+  }
+}
+
+
+</style>
+<body>
+    <div class="main">
+        <h1>
+            logo here
+        </h1>
+
+        <div class="list">
+            <ul>
+                <li>home</li>
+                <li>service</li>
+                <li>contact</li>
+                <li>about</li>
+            </ul>
+        </div>
+
+        <div class="nav">
+            <button onclick="return show()">
+            <img src="./image/588a6507d06f6719692a2d15.png" width="20px" height="20px">
+        </button>
+        <div class="mav" id="letm">
+           <ul>
+            <li>Home</li>
+            <li>Service</li>
+            <li>About</li>
+            <li>Contact</li>
+           </ul>
+        </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function show(){
+        var check = document.getElementById("letm");
+
+
+        if(check.style.display == "none"){
+            check.style.display = "block"
+        }
+        else{
+            check.style.display ="none"
+        }
+    }
+</script>
+</html>
